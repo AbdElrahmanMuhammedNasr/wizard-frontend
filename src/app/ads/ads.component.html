@@ -1,0 +1,41 @@
+<div class="my-ads-container-page p-5   text-white">
+  <strong class="word">My Ads</strong>
+
+  <br>
+  <br>
+
+  <div class=" ads-container d-flex">
+  <!-- adding    -->
+    <section class="create-ads" style="cursor: pointer">
+      <section class="d-flex justify-content-center ">
+        <p class="align-self-center">create new ad</p>
+      </section>
+    </section>
+  <!-- end    -->
+
+<!--   all user ads-->
+    <section class="ads" style="cursor: pointer" *ngFor="let ad of recentlyAds">
+        <img style="width: 100% ; height: 100%;" src="../../assets/1.jpeg">
+    </section>
+<!--   end user ads-->
+
+  </div>
+
+
+<!-------------------------------------------------------------->
+  <br>
+  <hr>
+  <br>
+  <strong class="word">Ads Overview</strong>
+  <br>
+  <br>
+
+  <div class="container overView">
+    <strong class="ads-number"><span style="color: red">120</span> Total ads</strong>
+
+
+  </div>
+
+
+
+</div>

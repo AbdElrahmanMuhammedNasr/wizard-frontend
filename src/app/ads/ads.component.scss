@@ -1,0 +1,45 @@
+$card_tall: 350px;
+
+.my-ads-container-page {
+  height: 94vh;
+
+  .word {
+    font-size: 30px;
+    font-family: ui-monospace;
+  }
+
+  .ads-container {
+
+    .create-ads {
+      width: 20%;
+      height: $card_tall;
+      border-radius: 10px;
+      border: 3px dashed gray;
+      overflow: hidden;
+      display:inline-block;
+      margin: 10px;
+      &:hover {
+        background-color: #2e3f53;
+      }
+    }
+
+    .ads {
+      width: 22%;
+      height: $card_tall;
+      border-radius: 20px;
+      margin: 10px;
+      overflow: hidden;
+      display:inline-block;
+
+
+    }
+  }
+
+}
+
+//////////////////////////////////////////////////////////////////////////
+.overView{
+  .ads-number{
+    color: #9ca4ac;
+  }
+}

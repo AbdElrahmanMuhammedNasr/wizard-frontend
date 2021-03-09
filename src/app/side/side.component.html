@@ -1,0 +1,20 @@
+<div class="side-bar-controller">
+
+  <section class="d-flex justify-content-center">
+    <strong class="m-3">Dashboard</strong>
+  </section>
+
+  <section class="d-flex flex-column ">
+
+    <button class="btn m-3 text-white"
+            style="height: 55px; text-align: start"
+            *ngFor="let sidebarController of sidebarControllersButtons"
+            (click)="navigateTo(sidebarController.name)">
+      <span [class]='sidebarController.icon' style="color: #5892e3; font-size: 20px"></span>
+      <small class="text-muted" style="margin: 0px 25px">{{sidebarController.name}}</small>
+    </button>
+
+
+  </section>
+
+</div>

@@ -1,0 +1,70 @@
+<div class="m-4 d-flex justify-content-around">
+  <button
+          [class]="socialMediaButton.color"
+          *ngFor="let socialMediaButton of socialMediaButtons"
+          (click)="onPost(socialMediaButton.name)">
+          <span  style="font-size:24px"[class]="socialMediaButton.icon"></span>
+          <span class="m-3">{{socialMediaButton.name}}</span>
+  </button>
+
+</div>
+
+<!-------------------------------------------------------------->
+
+<div class="container d-flex  justify-content-between">
+  <editor
+    class="col-sm-9"
+    [(ngModel)]="post"
+    apiKey="hqf6fn4bww1c197c9a47303vsv4hkbymhw3xd6yhxn0vjwl0"
+    [init]="{
+    height: 800,
+    menubar: false,
+    plugins: [
+      'advlist autolink lists link image charmap print preview anchor',
+      'searchreplace visualblocks code fullscreen',
+      'insertdatetime media table paste code help wordcount'
+    ],
+    toolbar: 'undo redo | image | link | formatselect | ' +
+    'bold italic backcolor | alignleft aligncenter ' +
+    'alignright alignjustify | bullist numlist outdent indent | ' +
+    'removeformat | help'
+
+  }"
+  ></editor>
+
+  <section class="manager col-sm-3 p-2" >
+
+        <h5><strong>Manager</strong></h5>
+
+    <strong>Post Date</strong>
+    <br><br>
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Select Date"
+          [ngxDatePicker]="dateInstanceSingle"
+          (valueChange)="onChangeDateSingle($event)">
+      <ngx-date-picker #dateInstanceSingle ></ngx-date-picker>
+    </div>
+
+    <!------------------------------------------------>
+
+    <hr>
+    <strong>Post Time</strong>
+    <br><br>
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Select Time"
+          [ngxTimePicker]="timeInstanceSingle"
+          (valueChange)="onChangeTimeSingle($event)">
+      <ngx-time-picker #timeInstanceSingle></ngx-time-picker>
+  </div>
+
+
+    <!-- [value]="singleDate" -->
+
+  </section>
+
+
+
+</div>
+
