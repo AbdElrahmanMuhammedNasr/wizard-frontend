@@ -1,0 +1,24 @@
+<div class="my-ads-container-page p-5   text-white">
+  <strong class="word">Archive Ads</strong>
+
+  <br>
+  <br>
+
+  <div class=" ads-container justify-content-center">
+
+    <!--   all user ads-->
+
+    <section class="ads" style="cursor: pointer" *ngFor="let ad of archiveAds">
+
+      <section class="section-img" [style]="{'background-image': 'url('+ad.image+')'}" >
+        <section class="details">
+            <i class="fa fa-eye" style="font-size: large"></i>
+            <span style="margin: 0px 3px">{{ad.number}}</span>
+        </section>
+
+      </section>
+    </section>
+    <!--   end user ads-->
+
+  </div>
+</div>

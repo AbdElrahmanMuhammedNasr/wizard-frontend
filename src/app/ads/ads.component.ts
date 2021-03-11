@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-ads',
@@ -7,12 +8,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class AdsComponent implements OnInit {
 
-  recentlyAds = [1, 1, 1,  1];
+  recentlyAds = [1, 1, 1, 1];
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   ngOnInit(): void {
   }
 
+  onAddNewAdd(): void {
+    this.router.navigate(['/addnewad']).then();
+  }
 }

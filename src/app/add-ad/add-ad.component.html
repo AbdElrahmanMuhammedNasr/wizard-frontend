@@ -9,6 +9,7 @@
 
 </div>
 
+<hr style="background-color: white">
 <!-------------------------------------------------------------->
 
 <div class="container d-flex  justify-content-between">
@@ -41,7 +42,7 @@
 
     <div class="form-group">
       <input class="form-control" placeholder="Select Date"
-          [ngxDatePicker]="dateInstanceSingle"
+          [ngxDatePicker]='dateInstanceSingle'
           (valueChange)="onChangeDateSingle($event)">
       <ngx-date-picker #dateInstanceSingle ></ngx-date-picker>
     </div>
@@ -54,7 +55,7 @@
 
     <div class="form-group">
       <input class="form-control" placeholder="Select Time"
-          [ngxTimePicker]="timeInstanceSingle"
+          [ngxTimePicker]='timeInstanceSingle'
           (valueChange)="onChangeTimeSingle($event)">
       <ngx-time-picker #timeInstanceSingle></ngx-time-picker>
   </div>

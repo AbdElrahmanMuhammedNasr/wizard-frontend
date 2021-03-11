@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-side',
@@ -34,12 +35,15 @@ export class SideComponent implements OnInit {
   ];
 
 
-  constructor() { }
+  constructor(private router: Router) {
+  }
 
   ngOnInit(): void {
   }
 
-  navigateTo(destination: string): void{
-      console.log(destination.split(' ').join('').toLowerCase());
+  navigateTo(destination: string): void {
+   const newDestination = destination.split(' ').join('').toLowerCase();
+
+   this.router.navigate(['/' + newDestination]).then();
   }
 }

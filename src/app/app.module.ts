@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule} from '@angular/core';
 import { AppComponent } from './app.component';
 import { SideComponent } from './side/side.component';
 import { HeaderComponent } from './header/header.component';
@@ -11,6 +10,11 @@ import {EditorModule} from '@tinymce/tinymce-angular';
 import {FormsModule} from '@angular/forms';
 import { NgxDatePickerModule } from '@ngx-tiny/date-picker';
 import { NgxTimePickerModule } from '@ngx-tiny/time-picker';
+import {HttpClientModule} from '@angular/common/http';
+import {AppRouting} from './z_shared/AppRouting';
+import { ArchiveComponent } from './archive/archive.component';
+
+
 
 @NgModule({
   declarations: [
@@ -18,15 +22,18 @@ import { NgxTimePickerModule } from '@ngx-tiny/time-picker';
     SideComponent,
     HeaderComponent,
     AdsComponent,
-    AddAdComponent
+    AddAdComponent,
+    ArchiveComponent
   ],
   imports: [
     BrowserModule,
     // in add post
-    EditorModule,NgxDatePickerModule,NgxTimePickerModule,
+    EditorModule, NgxDatePickerModule, NgxTimePickerModule,
     // end
     RouterModule,
-    FormsModule
+    FormsModule,
+    AppRouting,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
