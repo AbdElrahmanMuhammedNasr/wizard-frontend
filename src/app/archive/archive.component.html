@@ -1,14 +1,11 @@
-<div class="my-ads-container-page p-5   text-white">
-  <strong class="word">Archive Ads</strong>
-
-  <br>
-  <br>
-
-  <div class=" ads-container justify-content-center">
+<div class="my-ads-container-page p-2 text-white">
+  <strong class="word ">Archive Ads</strong>
+  <br> <br>
+  <div class=" ads-container justify-content-center ">
 
     <!--   all user ads-->
 
-    <section class="ads" style="cursor: pointer" *ngFor="let ad of archiveAds">
+    <section class="ads " style="cursor: pointer" *ngFor="let ad of archiveAds">
 
       <section class="section-img" [style]="{'background-image': 'url('+ad.image+')'}" >
         <section class="details">
@@ -20,5 +17,18 @@
     </section>
     <!--   end user ads-->
 
+
+
   </div>
+  <br>
+<!--  -->
+  <strong class="word ">Statistic</strong>
+
+  <div class="statistic d-flex justify-content-between  p-5">
+      <section class="stat-details d-flex flex-column" *ngFor="let s of statistic">
+        <strong>{{s.name}}</strong>
+        <small>{{s.number}}</small>
+      </section>
+  </div>
+
 </div>

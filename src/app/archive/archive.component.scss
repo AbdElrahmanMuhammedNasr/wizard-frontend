@@ -1,7 +1,8 @@
 $card_tall: 350px;
 
 .my-ads-container-page {
-  height: 94vh;
+  height: 100%;
+  //background-color: red;
 
   .word {
     font-size: 30px;
@@ -9,20 +10,27 @@ $card_tall: 350px;
   }
 
   .ads-container {
-  background-color: red;
+    //background-color: red;
+    text-align: center;
+    height: 60%;
+    overflow-y: scroll;
+    background-color: whitesmoke;
+    border-radius: 5px;
 
     .ads {
-      width: 22%;
+      width: 20%;
       height: $card_tall;
       border-radius: 20px;
-      margin: 10px;
+      margin: 10px 2vw;
       overflow: hidden;
       display: inline-block;
-      .section-img{
+
+      .section-img {
         background-size: cover;
         height: 100%;
         width: 100%;
-        .details{
+
+        .details {
           text-align: center;
           width: 100%;
           height: 9%;
@@ -34,5 +42,28 @@ $card_tall: 350px;
     }
   }
 
+}
+
+//----------------------------------------
+.statistic {
+  //background-color: red;
+  height: 40%;
+  border-radius: 5px;
+  .stat-details{
+    background-color: #0072e0;
+    max-width: 20%;
+    height: 20%;
+    padding: 20px;
+    margin: 0px 10px;
+    text-align: center;
+    display: inline-block;
+    border-radius: 5px;
+
+
+  }
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
